@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+mydb
+/static
+.DS_Store
+settings.py
+myvm
+
