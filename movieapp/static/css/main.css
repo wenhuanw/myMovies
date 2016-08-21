@@ -1,5 +1,14 @@
-img, p, form {
-	padding-bottom: 1em;
+p, form {
+        padding-bottom: 1em;
+       
+}
+
+img {
+  padding-bottom : 1em;
+  max-width: 300px;
+  max-height: 400px;
+  background-size: cover;
+
 }
 
 /* fix for bootstrap form-horizontal */
@@ -7,12 +16,16 @@ img, p, form {
     width:100%;
 }
 
+#headertagline {
+	color:purple
+}
+
 body > nav {
-	width:100%;
-	background-color: #e7e7e7;
-	padding-top: 15px;
-	padding-bottom: 5px;
-	text-transform: uppercase;
+        width:100%;
+        background-color: #e7e7e7;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
 }
 
 
@@ -20,7 +33,7 @@ body > nav {
     font-family:"Source Sans Pro","Helvetica Neue","Arial","sans-serif";
     font-weight:200;
 }
-
+                                                          
 
 dl dd {
   margin-bottom: 1em;
@@ -30,13 +43,13 @@ dl dd {
 
 
 img.poster {
-	width:32px;
-	height:50px;
+        width:32px;
+        height:50px;
 }
 
 img.poster-lg {
-	width:64px;
-	height:100px;
+        width:64px;
+        height:100px;
 }
 
 footer {
@@ -48,6 +61,8 @@ footer {
   background-color: #f5f5f5;
 }
 
+
+
 .save {
     float: right;
 }
@@ -57,7 +72,7 @@ footer {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: white;
+    color: blue;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
@@ -73,6 +88,7 @@ footer {
     font-size: 36pt;
     text-decoration: none;
 }
+              
 
 .content {
     margin-left: 40px;

@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+#import django.contrib.auth.views
+from django.contrib.auth import views
+from movieapp.loginform import LoginForm
+#from django.conf.urls import patterns
+#admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+   # url(r'^accounts/login/$', django.contrib.auth.views.login, name='login'),
+   # url(r'^accounts/logout/$', django.contrib.auth.views.logout, {'next_page': 'login'}),
     url(r'',include('movieapp.urls')),
+    url(r'^login/$', views.login, {'template_name': 'login.html', 'authentication_form': LoginForm}),
+    url(r'^logout/$', views.logout, {'next_page': '/login'}),
 ]

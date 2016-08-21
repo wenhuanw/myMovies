@@ -1,10 +1,9 @@
-{% extends "movieapp/base.html" %}
+
+{% extends "movieapp/base.html" %} 
 
 {% block content %}
 <header class="container">
-    <h1>The Search Result</h1>
-    <p class="lead">{{form.title}}</p>
-    <p><a href="{% url 'movie_list' %}">See Your Movie List</a></p>
+    <h1>Your Movie List</h1>
 </header>
 
 <main class="container" role="main">
@@ -14,9 +13,9 @@
             <th>Release Date</th>
             <th>Averaege Rate</th>
         </tr>
-        {% for movie in search_list %}
+        {% for movie in movie_list %}
         <tr>
-            <td><a href="{% url 'search_detail' pk=movie.pk %}">{{ movie.title }}</a></td>
+            <td><a href="{% url 'movie_detail' pk=movie.pk %}">{{ movie.title }}</a></td>
             <td>{{ movie.date }}</td>
             <td>{{ movie.rate }}</td>
         </tr>
@@ -26,4 +25,3 @@
 </main>
 
 {% endblock content %}
-
