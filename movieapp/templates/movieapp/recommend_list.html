@@ -1,10 +1,9 @@
-
 {% extends "movieapp/base.html" %} 
 
 {% block content %}
 <header class="container">
-    <h1>Your Movie List</h1>
-    <p><a href="{% url 'recommend_list' %}">Recommendation</a></p>
+    <h1>Movies Recommended For You</h1>
+    <p><a href="{% url 'movie_list' %}">Back To Your List</a></p>
 </header>
 
 <main class="container" role="main">
@@ -14,9 +13,10 @@
             <th>Release Date</th>
             <th>Averaege Rate</th>
         </tr>
-        {% for movie in movie_list %}
+        {% for movie in recommend_list %}
         <tr>
-            <td><a href="{% url 'movie_detail' pk=movie.pk %}">{{ movie.title }}</a></td>
+            <td><a href="{% url  'recommend_detail' pk=movie.pk %}">{{ movie.title }}</a></td>
+            <td>{{ movie.title }}</td>
             <td>{{ movie.date }}</td>
             <td>{{ movie.rate }}</td>
         </tr>

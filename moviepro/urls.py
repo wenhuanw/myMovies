@@ -26,6 +26,8 @@ urlpatterns = [
    # url(r'^accounts/login/$', django.contrib.auth.views.login, name='login'),
    # url(r'^accounts/logout/$', django.contrib.auth.views.logout, {'next_page': 'login'}),
     url(r'',include('movieapp.urls')),
+   # url(r'^api/', ApiEndpoint.as_view()),
     url(r'^login/$', views.login, {'template_name': 'login.html', 'authentication_form': LoginForm}),
     url(r'^logout/$', views.logout, {'next_page': '/login'}),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]

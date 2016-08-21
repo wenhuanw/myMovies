@@ -12,10 +12,15 @@ urlpatterns = [
      url(r'^movie/delete/(?P<pk>[0-9]+)/$', views.movie_delete, name='movie_delete'),
      url(r'^movie/list/$', views.movie_list, name='movie_list'),
      url(r'^movie/detail/(?P<pk>[0-9]+)/$', views.movie_detail, name='movie_detail'),
+     url(r'^movie/recommend/list/$', views.recommend_list, name='recommend_list'),
+     url(r'^movie/recommend/detail/(?P<pk>[0-9]+)/$', views.recommend_detail, name='recommend_detail'),
+     url(r'^movie/recommend/add/(?P<pk>[0-9]+)/$', views.movie_add_rec, name='movie_add_rec'),
 
      url(r'^api/create/$',views.movie_create_api,name='movie_create_api'),
      url(r'^api/list/$', views.movie_list_api, name='movie_list_api'),
      url(r'^api/id/(?P<pk>[0-9]+)/$', views.movie_id_api, name='movie_id_api'),
-   
+   #url(r'^api/list/$',ApiList.as_view(),name='movie_list_api'),
+   #url(r'^api/create/$',ApiCreat.as_view(),name='movie_create_api'),
+   #url(r'^api/id/(?P<pk>[0-9]+)/$',ApiId.as_view(),name='movie_id_api'),
 
 ]
