@@ -5,4 +5,6 @@ mydb
 .DS_Store
 settings.py
 myvm
+myservice.py
+
 

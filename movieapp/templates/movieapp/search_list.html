@@ -1,0 +1,29 @@
+{% extends "myurlex/base.html" %}
+
+{% block content %}
+<header class="container">
+    <h1>The Search Result</h1>
+    <p class="lead">{{form.title}}</p>
+</header>
+
+<main class="container" role="main">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Release Date</th>
+            <th>Averaege Rate</th>
+        </tr>
+        {% for movie in search_list %}
+        <tr>
+            <td><a href="{% url " movie_detail " pk=movie.pk %}">{{ movie.title }}</a></td>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.date }}</td>
+            <td>{{ movie.rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</main>
+
+{% endblock content %}
+

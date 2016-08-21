@@ -1,0 +1,98 @@
+img, p, form {
+	padding-bottom: 1em;
+}
+
+/* fix for bootstrap form-horizontal */
+.form-horizontal .form-group {
+    width:100%;
+}
+
+body > nav {
+	width:100%;
+	background-color: #e7e7e7;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+
+
+.heading {
+    font-family:"Source Sans Pro","Helvetica Neue","Arial","sans-serif";
+    font-weight:200;
+}
+
+
+dl dd {
+  margin-bottom: 1em;
+}
+
+
+
+
+img.poster {
+	width:32px;
+	height:50px;
+}
+
+img.poster-lg {
+	width:64px;
+	height:100px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f5f5f5;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: white;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+    border: 5px #000000;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: blue;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+
+
+.date {
+    float: right;
+    color: #828282;
+}
+
+
+h1 a {
+    color: white;
+}
+
+
+.page-header {
+    background-color: black;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
