@@ -28,6 +28,6 @@ urlpatterns = [
     url(r'',include('movieapp.urls')),
    # url(r'^api/', ApiEndpoint.as_view()),
     url(r'^login/$', views.login, {'template_name': 'login.html', 'authentication_form': LoginForm}),
-    url(r'^logout/$', views.logout, {'next_page': '/login'}),
+    url(r'^logout/$', views.logout, {'next_page': '/movie/login'}),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
