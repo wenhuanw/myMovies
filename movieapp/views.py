@@ -178,12 +178,12 @@ def movie_list_api(request):
 
     return Response(status=status.HTTP_401_UNAUTHORIZED)
 
-@protected_resource()
+#@protected_resource()
 @ratelimit(key='ip', rate='10/m', block=True)
 @api_view(['POST'])
 def movie_create_api(request):
     if request.method == "POST":
-        serializer = UrlSerializer(data=request.data)
+        serializer = MovieSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)   
@@ -191,7 +191,7 @@ def movie_create_api(request):
     return Response(status=status.HTTP_401_UNAUTHORIZED)
 
 
-@protected_resource()
+#@protected_resource()
 @ratelimit(key='ip', rate='10/m', block=True)
 @api_view(['GET','DELETE'])
 def movie_id_api(request, pk, format=None):
